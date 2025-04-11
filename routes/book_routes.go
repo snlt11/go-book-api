@@ -12,5 +12,7 @@ func RegisterBookRoutes(r *gin.Engine) {
 	{
 		book.GET("", controllers.GetBooks)
 		book.POST("", controllers.CreateBook)
+		book.PUT("/:id", controllers.UpdateBook)
+		book.DELETE("/:id", controllers.DeleteBook)
 	}
 }
